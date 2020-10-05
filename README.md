@@ -1,24 +1,2 @@
-# amplify-hello
-
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+https://qiita.com/yone_suke/items/b2a0334b36ac5de4f4f8
+https://day-journal.com/memo/try-024/#router-js
