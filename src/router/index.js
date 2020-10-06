@@ -71,6 +71,7 @@ const router = new VueRouter({
 
 // リダイレクト設定
 router.beforeResolve(async (to, from, next) => {
+    // 認証が必要なページならば
     if (to.matched.some(record => record.meta.requiresAuth)) {
         user = await getUser();
         if (!user) {

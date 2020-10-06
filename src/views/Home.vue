@@ -9,22 +9,33 @@
 </template>
 
 <script>
-import axios from "axios"
+import { API } from 'aws-amplify'
 export default {
   name: 'home',
   data: () => {
     return {
       name: "ken",
-      info : null
+      info : null,
+      apiName: 'sampleapigateway',
+      // API Gatewayの設定パス
+      path: '/sample',
     }
   },
   mounted(){
-    axios
-      .get('https://api.coindesk.com/v1/bpi/currentprice.json')
-      .then(response => {
-        console.log(response.data)
-        this.info = response.data
-      })
+    const path = this.path;
+    // オプション
+    const myInit = {
+      headers: {},
+      response: true,
+    };
+    // データ取得
+    API.get(this.apiName, path, myInit).then(response => {
+        // テーブル表示
+        console.log(response)
+    }).catch(error => {
+        // テーブルリセット
+        console.error(error)
+    });
   }
 }
 </script>
