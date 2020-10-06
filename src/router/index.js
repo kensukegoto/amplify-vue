@@ -6,9 +6,8 @@ import Login from '@/views/Login.vue'
 import store from '../store'
 
 // Amplify読み込み
-import { AmplifyEventBus } from 'aws-amplify-vue'
+import { AmplifyPlugin, AmplifyEventBus } from 'aws-amplify-vue'
 import * as AmplifyModules from 'aws-amplify'
-import { AmplifyPlugin } from 'aws-amplify-vue'
 
 Vue.use(VueRouter)
 Vue.use(AmplifyPlugin, AmplifyModules)
