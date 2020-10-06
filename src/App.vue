@@ -1,8 +1,5 @@
 <template>
-  <amplify-authenticator>
-    <!-- The rest of your app code -->
-    <amplify-sign-out></amplify-sign-out>
-  </amplify-authenticator>
+  <router-view></router-view>
 </template>
 
 <style>
